@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Greeting Web Page</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to external CSS -->
+</head>
+<body>
+    <header>
+        <h1>Welcome my name is Cody what is yours?</h1>
+    </header>
+    
+    <main>
+        <p>Please enter your name below:</p>
+        <input type="text" id="nameInput" placeholder="Enter your name">
+        <button onclick="greetUser()">Submit</button>
+        <p id="greetingMessage"></p>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Greeting Website</p>
+    </footer>
+
+    <script>
+        function greetUser() {
+            var name = document.getElementById("nameInput").value;
+            if(name) {
+                document.getElementById("greetingMessage").innerHTML = "Hello, " + name + "!";
+            } else {
+                document.getElementById("greetingMessage").innerHTML = "Please enter a valid name.";
+            }
+        }
+    </script>
+</body>
+</html>
